@@ -243,12 +243,30 @@ span{
 }
 
 .card{
+    position: relative;
     width: 21.5vw;
     height: 16.55vw;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.card_button{
+    visibility: hidden;
+    position: absolute;
+    bottom: 2vw;
+    width: 21.5vw;
+    border: none;
+    background-color: black;
+    color: white;
+    height: 2vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.card:hover .card_button{
+    visibility: visible;
 }
 
 .card:hover{
@@ -304,4 +322,65 @@ footer p{
 
 footer i{
     margin-right: 0.5vw;
+}
+
+/* Teste */
+
+.container{
+    background-color: aquamarine;
+    width: 90%;
+    margin: 100px auto;
+    display: flex;
+    padding: 20px;
+}
+
+.box{
+    display: flex;
+    background-image: url(./card1.png);
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    padding: 25px;
+    border: aquamarine solid 3px;
+    flex: 1;
+    transition: 3s;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    position: relative;
+        font-size: 1.3vw;
+        color: white;
+        text-transform: uppercase;
+        text-shadow: 2.41901px 3.22535px 5.64437px rgba(0, 0, 0, 0.5);
+}
+
+.ola{
+    display: flex;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    margin: 2px;
+    padding: 5px;
+    background-color: red;
+    justify-content: space-evenly;
+}
+
+.ola h2{
+    visibility: hidden;
+}
+
+.box:hover{
+    flex: 4;
+    font-size: 3vw;
+}
+
+.box:hover .ola{
+    width: 200px;
+    transition: 3s;
+}
+
+.box:hover .ola h2{
+    visibility: visible;
+    font-size: 1vw;
 }
