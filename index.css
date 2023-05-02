@@ -223,7 +223,7 @@ span{
 }
 
 .enem p{
-    margin-bottom: 4vw;
+    margin-bottom: 1vw;
     margin-top: 1vw;
     width: 72.65vw;
     font-family: 'Ubuntu';
@@ -233,75 +233,6 @@ span{
     color: #000000;
 }
 
-.cards{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    width: 72.65vw;
-    gap: 1.77vw;
-    margin-bottom: 4vw;
-}
-
-.card{
-    position: relative;
-    width: 21.5vw;
-    height: 16.55vw;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.card_button{
-    visibility: hidden;
-    position: absolute;
-    bottom: 2vw;
-    width: 21.5vw;
-    border: none;
-    background-color: black;
-    color: white;
-    height: 2vw;
-    text-align: center;
-    cursor: pointer;
-}
-
-.card:hover .card_button{
-    visibility: visible;
-}
-
-.card:hover{
-    scale: 1.05;
-    box-sizing: border-box;
-    transition: 0.6s;
-    background-image: #266E00;
-}
-
-.card h2{
-    font-size: 2.3vw;
-    color: white;
-    text-transform: uppercase;
-    text-shadow: 2.41901px 3.22535px 5.64437px rgba(0, 0, 0, 0.5);
-    text-align: center;
-}
-
-#card1{
-    background-image: url("./card1.png");
-}
-#card2{
-    background-image: url("./card2.png");
-}
-#card3{
-    background-image: url("./card3.png");
-}
-#card4{
-    background-image: url("./card4.png");
-}
-#card5{
-    background-image: url("./card5.png");
-}
-#card6{
-    background-image: url("./card6.png");
-}
 
 /* Footer */
 
@@ -327,26 +258,27 @@ footer i{
 /* Teste */
 
 .container{
-    background-color: aquamarine;
+    background-color: white;
     width: 90%;
-    margin: 100px auto;
     display: flex;
     padding: 20px;
+    margin-bottom: 10vw;
 }
 
 .box{
     display: flex;
-    background-image: url(./card1.png);
     background-size: cover;
     background-position: center;
     height: 200px;
     padding: 25px;
-    border: aquamarine solid 3px;
+    border: white solid 3px;
+    border-radius: 1vw;
     flex: 1;
-    transition: 3s;
+    transition: 2s;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    overflow: hidden;
 
     position: relative;
         font-size: 1.3vw;
@@ -355,32 +287,57 @@ footer i{
         text-shadow: 2.41901px 3.22535px 5.64437px rgba(0, 0, 0, 0.5);
 }
 
-.ola{
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 20px;
-    margin: 2px;
-    padding: 5px;
-    background-color: red;
-    justify-content: space-evenly;
-}
-
-.ola h2{
-    visibility: hidden;
-}
-
 .box:hover{
     flex: 4;
     font-size: 3vw;
+    border-radius: 1vw;
 }
 
-.box:hover .ola{
-    width: 200px;
-    transition: 3s;
+.card_body{
+    position: absolute;
+    width: 100%;
+    gap: 20%;
+    height: 100%;
+    top: 100%;
+    left: 0px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: brightness(0.5);
+    flex-direction: column;
+    justify-content: center;
 }
 
-.box:hover .ola h2{
-    visibility: visible;
-    font-size: 1vw;
+.card_body h4{
+    font-size: 2vw;
+}
+
+.card_body button{
+    width: 60%;
+    height: 20%;
+    background-color: #91e90e;
+    color: black;
+    border-radius: 2vw;
+    font-size: 1.2vw;
+    border: none;
+}
+
+.box:hover .card_body{
+    top: 0;
+    transition: 2s;
+}
+
+#box1{
+    background-image: url("./card1.png");
+}
+#box2{
+    background-image: url("./card2.png");
+}
+#box3{
+    background-image: url("./card3.png");
+}
+#box4{
+    background-image: url("./card6.png");
+}
+#box5{
+    background-image: url("./card5.png");
 }
